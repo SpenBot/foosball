@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+
+  postgres-service:
+    build: ./db
+    # ports:
+    #   - 3003:5432
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+    container_name: tmnt-pg
+
+  node-express-api:
+    build: ./api
+    ports:
+      - 3002:3000
+    depends_on:
+      - postgres-service
+    volumes:
+      - ./api/:/app
+    container_name: tmnt-api
+
+  angular-website:
+    build: ./client
+    ports:
+      - 3001:4200
+    depends_on:
+      - node-express-api
+    volumes:
+      - ./client/:/usr/src/app
+    container_name: tmnt-client
