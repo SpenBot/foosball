@@ -140,7 +140,25 @@
       $ systemctl stop docker
 ```
 
+- for now, only expose the API and the UI
+  - the network only really needs to be the API and DB, UI is seperate
+  - configure UI to make service calls to localhost
 
+
+# FIRST EC2 INSTANCE
+
+- copying steps from new-gen/notes/docker-kubernetes-aws/aws-ec2/aws-ec2.md
+- log into AWS, click SERVICES > EC2 > Launch Instance > Ubuntu 16.04 > t2 micro
+  - then do NEXT: Configure Instance Details
+  - follow my steps
+- for security group
+  - Keep SSH Port 22 (suggests allowing only from specific IP addresses, but it should be protected by key)
+  - Add HTTP Port 80
+  - review and launch
+  - create and download SSH key
+  - go back to SERVICES > EC2 > Running Instances
+  - now hit CONNECT, copy the string in the second part
+  - replace the pem file with full path, and use sudo in your terminal to connect
 
 
 >> END
