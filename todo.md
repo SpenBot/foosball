@@ -1,4 +1,23 @@
 
+
+
+- go through my old ec2 test, and docker-hw repo, and new-gemn docker/aws notes and clean them up and copy them over
+  - conslidate things like commands
+- should probably clean up this repo also
+
+https://github.com/SpenBot/ec2-docker-test/blob/master/node-api/index.js
+https://github.com/SpenBot/ec2-docker-test
+https://github.com/SpenBot/enterprise/blob/master/client/empire-angular/src/app/projects/store/projects.model.ts
+https://github.com/SpenBot/docker-hw/blob/master/docker.md
+https://github.com/SpenBot/new-gen/tree/master/notes/docker-kubernetes-aws-bootstrap-testing/aws-ec2
+https://github.com/SpenBot/new-gen/blob/master/notes/docker-kubernetes-aws-bootstrap-testing/aws-ec2/aws-ec2.md
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
 > Turtles Forms and app build, clean up notes for it
     > actually, I think I should change it to college foosball or something (and do more complex associations for sequelize)
     > players can belong to many teams, and have any positions, etc

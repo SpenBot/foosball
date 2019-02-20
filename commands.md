@@ -23,8 +23,11 @@
       $ sudo docker network inspect <net-id>               [inspect a network by id]
       $ sudo docker network rm <net-id>                    [remove a network by id]
 
+      $ sudo docker-compose build <name-in-compose>        [rebuild just one image]
+
       $ sudo systemctl stop docker                         [stop docker daemon]
 ```
+
 
 ## REBUILDING ONE IMAGE
 
