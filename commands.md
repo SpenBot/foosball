@@ -26,6 +26,16 @@
       $ sudo systemctl stop docker                         [stop docker daemon]
 ```
 
+## REBUILDING ONE IMAGE
+
+https://stackoverflow.com/questions/35228970/docker-compose-build-single-container/35256698
+https://stackoverflow.com/questions/36884991/how-to-rebuild-docker-container-in-docker-compose-yml
+https://blog.georgovassilis.com/2016/12/20/rebuilding-single-services-in-docker-compose/
+
+
+
+#### DOCKER
+
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
 
 

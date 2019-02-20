@@ -13,19 +13,19 @@ services:
   node-express-api:
     build: ./api
     ports:
-      - 80:3000
+      - 6000:3000
     depends_on:
       - postgres-service
     volumes:
       - ./api/:/app
     container_name: tmnt-api
 
-  angular-website:
-    build: ./client
-    ports:
-      - 5000:4200
-    depends_on:
-      - node-express-api
-    volumes:
-      - ./client/:/usr/src/app
-    container_name: tmnt-client
+  # angular-website:
+  #   build: ./client
+  #   ports:
+  #     - 5000:4200
+  #   depends_on:
+  #     - node-express-api
+  #   volumes:
+  #     - ./client/:/usr/src/app
+  #   container_name: tmnt-client
