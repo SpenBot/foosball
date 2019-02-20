@@ -160,5 +160,12 @@
   - now hit CONNECT, copy the string in the second part
   - replace the pem file with full path, and use sudo in your terminal to connect
 
+  - now you are connected
+    - install docker and docker compose, check the commands shit
+  - git clone my project (using HTTPS)
+    - replace later with scp after zipping files
+
+
+
 
 >> END
