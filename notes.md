@@ -166,6 +166,22 @@
     - replace later with scp after zipping files
 
 
+https://stackoverflow.com/questions/17161345/how-to-open-a-web-server-port-on-ec2-instance
+
+https://stackoverflow.com/questions/5004159/opening-port-80-ec2-amazon-web-services/10454688#10454688
+
+https://stackoverflow.com/questions/36884991/how-to-rebuild-docker-container-in-docker-compose-yml
+
+https://blog.georgovassilis.com/2016/12/20/rebuilding-single-services-in-docker-compose/
+
+https://stackoverflow.com/questions/35228970/docker-compose-build-single-container/35256698
+
+https://serverfault.com/questions/838393/aws-route-to-multiple-ports-on-a-single-instance
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html
+
+
+
 
 
 >> END

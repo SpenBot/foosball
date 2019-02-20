@@ -10,7 +10,7 @@
       $ sudo docker-compose down                           [stop docker-compose containers and networks]
 
       $ sudo docker images                                 [list all images on your machine]
-      $ sudo docker rmi $(sudo docker images -a -q)             [delete all images]
+      $ sudo docker rmi $(sudo docker images -a -q)        [delete all images]
       $ sudo docker rmi <image-id>                         [delete images by id]
 
       $ sudo docker ps                                     [list running containers]
