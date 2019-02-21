@@ -4,6 +4,13 @@
 
 - I'm also going to try to build the angular as well, and try host using nginX
 
+
+- *- the point is to make a repeatable documentation (so do environments and shit) -*
+
+
+
+
+
 # DATABASE SETUP
 
 - create the sql file
@@ -158,7 +165,8 @@
   - create and download SSH key
   - go back to SERVICES > EC2 > Running Instances
   - now hit CONNECT, copy the string in the second part
-  - replace the pem file with full path, and use sudo in your terminal to connect
+  - replace the pem file with full path, and use *sudo* in your terminal to connect
+    `"/home/spenser/Desktop/`
 
   - now you are connected
     - install docker and docker compose, check the commands shit
@@ -166,10 +174,23 @@
     - replace later with scp after zipping files
 
 
+# DOCKER AND DOCKER-COMPOSE INSTALL
 
 
 
 
+# NGINX TEST
+
+on aws, open HTTP port 80 (default for nginx)
+
+```
+      $ sudo apt-get update
+      $ sudo apt-get install nginx
+      $ sudo service nginx start
+      $ sudo systemctl status nginx
+```
+
+you should be able to go to port 80 on IP address and see default page
 
 
 
@@ -181,6 +202,8 @@
 > but I figured out how to stand up an EC2 I think (its not hard)
   > and ssh into it
 > and I think I know how to configure docker compose to run so that it works
+
+
 
 
 # SHIT TO LEARN:
@@ -199,6 +222,8 @@
 - do I need to do this HOST stuff for my api?
   - should probably do a deeper dive into docker itself
 - should also probably learn how to do environment variables, and protecting passwords and IP's
+
+
 
 
 

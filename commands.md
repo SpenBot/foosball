@@ -44,37 +44,37 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-o
 
 #### DOCKER-COMPOSE STARTUP :
 Docker Compose is not included with Docker. Use the following commands to install the latest from their Github
-```sh
-$ sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 ```
-```sh
-$ sudo chmod +x /usr/local/bin/docker-compose
+      $ sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+```
+```
+      $ sudo chmod +x /usr/local/bin/docker-compose
 ```
 Confirm docker-compose was installed correctly
-```sh
-$ docker-compose --version
 ```
-Make sure your docker daemon is running, then run docker-compose from the root directory of PIT, and close it when you are finished
-```sh
-$ systemctl status docker
+      $ docker-compose --version
+```
+Make sure your docker daemon is running, then run docker-compose from the root directory of PIT, and close it when you are finied
+```
+      $ systemctl status docker
 ```
 If Docker is not running
-```sh
-$ systemctl start docker
 ```
-```sh
+      $ systemctl start docker
+```
+```
 
 ```
-```sh
-$ docker-compose up --build
+```
+      $ docker-compose up --build
 ```
 This will not rebuild your images, so is faster
-```sh
-$ docker-compose up
+```
+      $ docker-compose up
 ```
 CTRL-C (to stop your containers)
-```sh
-$ systemctl stop docker
+```
+      $ systemctl stop docker
 ```
 NOTE:
   - This will take like 5 minutes. Angular in particular takes a while to build.
