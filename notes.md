@@ -179,6 +179,7 @@
 
 
 
+
 # NGINX TEST
 
 on aws, open HTTP port 80 (default for nginx)
@@ -193,8 +194,6 @@ on aws, open HTTP port 80 (default for nginx)
 you should be able to go to port 80 on IP address and see default page
 
 
-
-
 > okay didn't work
   > tried to do custom TCP with port 6000 and still didn't work.
   > solution may be to have multiple instances
@@ -202,6 +201,18 @@ you should be able to go to port 80 on IP address and see default page
 > but I figured out how to stand up an EC2 I think (its not hard)
   > and ssh into it
 > and I think I know how to configure docker compose to run so that it works
+
+- wtf, this works from my local machine
+```
+          $ curl 35.174.11.70:6000/api/turtles
+```
+
+- well this is fucked up, I can curl into it from both my localmachine and from inside the server and it works ....
+- it might be like ubuntu16 issue
+
+https://forums.aws.amazon.com/thread.jspa?threadID=84344
+https://github.com/Netflix-Skunkworks/Scumblr/issues/83
+
 
 
 
