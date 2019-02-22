@@ -229,12 +229,13 @@ https://github.com/Netflix-Skunkworks/Scumblr/issues/83
 - how to serve an Angular dist folder on nginX
 - can you just copy over built docker-images, and not transfer source code?
   - but I feel like the volumes for my db and stuff would not work
-  - but since all the other commands happen when buildign the image ... I think it would mostly work ...
+  - but since all the other commands happen when building the image ... I think it would mostly work ...
 - do I need to do this HOST stuff for my api?
   - should probably do a deeper dive into docker itself
 - should also probably learn how to do environment variables, and protecting passwords and IP's
-
-
+- can you run multiple docker-compose on one instance?
+- how do I build and run on nginx?
+- how do I expose and protect ports on a raspberry pi or soemthing, something that doesnt have an ec2 wrapper on it
 
 
 
