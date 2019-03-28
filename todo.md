@@ -40,10 +40,7 @@
 > build my teams, and my teammates pages maybe
 > build a plays drop down, for view or create, which will prompt which
 > make a create-plays page, draft-plays, official-plays
-
-
-
-
+> try docker shit
 
 
 
