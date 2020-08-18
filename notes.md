@@ -4,6 +4,13 @@
 
 - I'm also going to try to build the angular as well, and try host using nginX
 
+
+- *- the point is to make a repeatable documentation (so do environments and shit) -*
+
+
+
+
+
 # DATABASE SETUP
 
 - create the sql file
@@ -139,6 +146,103 @@
       CTRL-C (to stop containers)
       $ systemctl stop docker
 ```
+
+- for now, only expose the API and the UI
+  - the network only really needs to be the API and DB, UI is seperate
+  - configure UI to make service calls to localhost
+
+
+# FIRST EC2 INSTANCE
+
+- copying steps from new-gen/notes/docker-kubernetes-aws/aws-ec2/aws-ec2.md
+- log into AWS, click SERVICES > EC2 > Launch Instance > Ubuntu 16.04 > t2 micro
+  - then do NEXT: Configure Instance Details
+  - follow my steps
+- for security group
+  - Keep SSH Port 22 (suggests allowing only from specific IP addresses, but it should be protected by key)
+  - Add HTTP Port 80
+  - review and launch
+  - create and download SSH key
+  - go back to SERVICES > EC2 > Running Instances
+  - now hit CONNECT, copy the string in the second part
+  - replace the pem file with full path, and use *sudo* in your terminal to connect
+    `"/home/spenser/Desktop/`
+
+  - now you are connected
+    - install docker and docker compose, check the commands shit
+  - git clone my project (using HTTPS)
+    - replace later with scp after zipping files
+
+
+# DOCKER AND DOCKER-COMPOSE INSTALL
+
+
+
+
+# NGINX TEST
+
+on aws, open HTTP port 80 (default for nginx)
+
+```
+      $ sudo apt-get update
+      $ sudo apt-get install nginx
+      $ sudo service nginx start
+      $ sudo systemctl status nginx
+```
+
+you should be able to go to port 80 on IP address and see default page
+
+
+
+
+> okay didn't work
+  > tried to do custom TCP with port 6000 and still didn't work.
+  > solution may be to have multiple instances
+
+> but I figured out how to stand up an EC2 I think (its not hard)
+  > and ssh into it
+> and I think I know how to configure docker compose to run so that it works
+
+
+
+
+# SHIT TO LEARN:
+
+- how to open other ports on a single instance
+- how to create and transfer zip files using src
+  - or maybe just transfer files one at a time
+- how to nano files so I don't have to change shit remotely, and do it on the instance itself
+  - also what are CURL commands?
+- how do you SSH into something thats not an ec2
+  - is it the same? like a raspberry pi
+- how to serve an Angular dist folder on nginX
+- can you just copy over built docker-images, and not transfer source code?
+  - but I feel like the volumes for my db and stuff would not work
+  - but since all the other commands happen when buildign the image ... I think it would mostly work ...
+- do I need to do this HOST stuff for my api?
+  - should probably do a deeper dive into docker itself
+- should also probably learn how to do environment variables, and protecting passwords and IP's
+
+
+
+
+
+- creating zip files and using src
+https://www.computerhope.com/unix/curl.htm
+http://www.hypexr.org/linux_scp_help.php
+https://www.wpoven.com/tutorials/server/how-to-zip-or-unzip-files-and-folders-using-command-line-on-ubuntu-server
+
+- opening other ports on an EC2:
+https://stackoverflow.com/questions/17161345/how-to-open-a-web-server-port-on-ec2-instance
+https://stackoverflow.com/questions/5004159/opening-port-80-ec2-amazon-web-services/10454688#10454688
+https://serverfault.com/questions/838393/aws-route-to-multiple-ports-on-a-single-instance
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html
+
+- re-building only one docker-compose image
+https://stackoverflow.com/questions/36884991/how-to-rebuild-docker-container-in-docker-compose-yml
+https://blog.georgovassilis.com/2016/12/20/rebuilding-single-services-in-docker-compose/
+https://stackoverflow.com/questions/35228970/docker-compose-build-single-container/35256698
+
 
 
 

@@ -15,7 +15,8 @@ export class TurtlesService {
   constructor(private http: HttpClient) { }
 
   // private TURTLE_URL = 'http://tmnt-api:3000/api/turtles';
-  private TURTLE_URL = 'http://localhost:3002/api/turtles';
+  // private TURTLE_URL = 'http://localhost:3002/api/turtles';
+  private TURTLE_URL = 'http://3.84.254.203:6000/api/turtles';
 
   getAllTurtles (): Observable<TurtleModel[]> {
     return this.http.get<TurtleModel[]>(this.TURTLE_URL)
